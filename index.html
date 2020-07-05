@@ -109,6 +109,7 @@ Guessing Game  <i class="fab fa-fantasy-flight-games"></i>
 	<span id="message"></span>
 	<button class="mode">Easy</button>
 	<button class="mode selected">Hard</button>
+	<button class="info"><i class="fas fa-info-circle"></i></button>
 </div>
 
 
@@ -130,7 +131,7 @@ var messageDisplay=document.querySelector("#message");
 var h1=document.querySelector("h1");
 var resetbutton=document.querySelector("#reset");
 var modebuttons=document.querySelectorAll(".mode");
-var about=document.querySelector("#about");
+var info=document.querySelector(".info");
 
 init();
 
@@ -173,7 +174,9 @@ function init(){
 }
 
 
-
+info.addEventListener("click",function open(){
+	alert("An RGB color value is specified with: rgb(red, green, blue).Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255.For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.");
+});
 
 function reset(){
 
